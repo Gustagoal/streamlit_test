@@ -1,8 +1,7 @@
 import streamlit as st  
 import pandas as pd
 
-dados = pd.read_excel('bd_vendas.xlsx')
-
+dados  = pd.read_excel('bd_vendas.xlsx')
 
 st.title('Ola, tudo bem?')
 
@@ -12,7 +11,8 @@ if nome:
     st.text(f' Seja bem vindo {nome}')
 
 
-st.area_chart(dados,x='Produto',y='Qtde') #Produto Qtde 
+st.dataframe(dados)
+
 
 
 
