@@ -2,10 +2,11 @@ import streamlit as st
 import pandas as pd 
 
 with st.sidebar:
-    upload = st.file_uploader("Insira seu arquivo")
-    if upload:
-     st.success("Arquivo inserido com sucesso")
-
+    try:
+        upload = st.file_uploader("Insira seu arquivo")
+        st.success("Arquivo carregado com sucesso")
+    except Exception as e:
+        st.text("Insira um arquivo")
     df = pd.read_excel(upload)
     st.radio(label="Selecione as opções abaixo",options=df['Categoria'].unique())
 

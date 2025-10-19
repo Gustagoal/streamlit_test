@@ -2,7 +2,7 @@ import streamlit as st
 
 with st.sidebar:
     st.title("Calculadora de IMC")
-    st.image(r"C:\Users\Gustavo Castro\Desktop\streamlit_test\calculadora\obesidade.jpg")
+    # st.image(r"C:\Users\Gustavo Castro\Desktop\streamlit_test\calculadora\obesidade.jpg")
 
 peso = st.number_input(label= "Digite seu peso ",min_value=0.0)
 altura = st.number_input(label = "Digite sua altura",min_value=0.0)
